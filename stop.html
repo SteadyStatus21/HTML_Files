@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blocked Website</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+      body {
+        background-color: black;
+        font-family: 'Koulen', Arial, sans-serif;
+      }
+	  h1 {
+		text-align: center;
+		font-size: 3.5em;
+		color: white;
+		margin: 50px 0;
+	  }
+	  img {
+		display: block;
+		margin: 0 auto;
+		width: 200px;
+	  }
+	  #why {
+		display: block;
+		text-align: center;
+		margin: 50px auto;
+		padding: 10px 20px;
+		background-color: #333;
+		color: white;
+		text-decoration: none;
+		font-size: 1em;
+		border-radius: 5px;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	  }
+	  #why:hover {
+		background-color: #555;
+	  }
+	  #why:active {
+		background-color: #111;
+	  }
+	  .popup {
+		display: none;
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #f9f9f9;
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	  }
+	  .popup p {
+		font-size: 1.4em;
+		line-height: 1.5;
+		color: #333;
+		margin: 0;
+	  }
+	  .close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: #aaa;
+		cursor: pointer;
+	  }
+	  .close:hover {
+		color: #555;
+	  }
+
+    </style>
+  </head>
+  <body>
+    <h1>This website is prohibited on TSU.</h1>
+    <img src="https://i.ibb.co/WHHftb3/Stop-sign.png" alt="stop-sign">
+    <div class="popup">
+      <span class="close">&times;</span>
+      <p>Additional Information:<br>
+	  You are prohibited from visiting this page because it poses a security risk to either you or the hosting provider of TSU. <br>
+	  Attempting to circumvent this block is <b>strictly prohibited</b> and will redirect you back to this page. <br>
+	  If you have any questions, please DM @SteadyStatus21#9969 on Discord for more information.</p>
+    </div>
+    <button id="why" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 2em; padding: 20px;">Why?</button>
+    <script>
+      var whyBtn = document.getElementById("why");
+      var popup = document.querySelector(".popup");
+      var close = document.querySelector(".close");
+      whyBtn.addEventListener("click", function() {
+        popup.style.display = "block";
+      });
+      close.addEventListener("click", function() {
+        popup.style.display = "none";
+      });
+    </script>
+  </body>
